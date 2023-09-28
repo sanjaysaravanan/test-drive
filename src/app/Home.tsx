@@ -1,32 +1,30 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './page.module.css';
 
 type NavProps = {
-  linkRef: React.RefObject<HTMLDivElement>,
   name: string,
+  clickFunc: () => void,
+  highlight: boolean
 }
 
-const NavItem: React.FC<NavProps> = ({ linkRef, name }) => {
-  const moveToReference = () => {
-    if (linkRef.current) {
-      linkRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center'
-      })
-    }
-  }
+const NavItem: React.FC<NavProps> = ({ name, clickFunc, highlight }) => {
   return (
-    <button className={`${styles.noBorderBtn} ${styles.navItem}`} onClick={moveToReference} >{name}</button>
+    <button
+      className={`${styles.noBorderBtn} ${styles.navItem} ${highlight ? styles.highlightNav : ''}`}
+      onClick={clickFunc}
+    >
+      {name}
+    </button>
   );
 }
 
 export default function Home() {
 
-  const refOne = useRef<HTMLDivElement>(null);
+  const [page, setPage] = useState('HOME');
 
+  const refOne = useRef<HTMLDivElement>(null);
   const refTwo = useRef<HTMLDivElement>(null);
   const refThree = useRef<HTMLDivElement>(null);
   const refFour = useRef<HTMLDivElement>(null);
@@ -42,9 +40,9 @@ export default function Home() {
     { name: 'CONTACT', ref: refSix },
   ];
 
-  function goToCurrent() {
-    if (refTwo.current) {
-      refTwo.current.scrollIntoView({
+  function goToCurrent(currRef: React.RefObject<HTMLDivElement>) {
+    if (currRef.current) {
+      currRef.current.scrollIntoView({
         behavior: 'smooth',
         block: 'nearest',
         inline: 'center'
@@ -52,9 +50,48 @@ export default function Home() {
     }
   }
 
+  const getDimensions = (ele: HTMLDivElement) => {
+    const { height } = ele.getBoundingClientRect();
+    const offsetTop = ele.offsetTop - 200;
+    const offsetBottom = offsetTop + height;
+    return {
+      height,
+      offsetTop,
+      offsetBottom,
+    };
+  }
+
+
+  const scrollFunc = (e: Event) => {
+    if (e.currentTarget) {
+      const scrollPosition = (e.currentTarget as Window).scrollY;
+      for (let i = 0; i < 6; i++) {
+        const obj = { ...navs[i] };
+        const ele = obj.ref.current;
+        if (ele) {
+          const { offsetBottom, offsetTop } = getDimensions(ele);
+          if (scrollPosition > offsetTop && scrollPosition < offsetBottom) {
+            setPage(obj.name);
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollFunc);
+    return () => {
+      window.removeEventListener('scroll', scrollFunc);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // console.log();
+
   return (
     <>
-      <div className={styles.layerOnCanvas} ref={refOne} >
+      <div className={styles.layerOnCanvas} ref={refOne} id="HOME" >
         <div className={styles.homeText}  >
           Hello, I&apos;m <span className={styles.homeTextHighlight} >Sanjay Saravanan</span>.
           <br />
@@ -63,7 +100,7 @@ export default function Home() {
           <button
             type='button'
             className={styles.viewBtn}
-            onClick={goToCurrent}
+            onClick={() => goToCurrent(refTwo)}
           >
             View my work&nbsp;
             <i className={`fa-solid fa-arrow-right ${styles.classIcon}`}></i>
@@ -74,11 +111,31 @@ export default function Home() {
       <div className={styles.header}>
         <div className={styles.headerBox} >
           {navs.map(({ name, ref }) => (
-            <NavItem linkRef={ref} name={name} key={name} />
+            <React.Fragment key={name}>
+              <NavItem
+                name={name}
+                key={name}
+                clickFunc={() => goToCurrent(ref)}
+                highlight={name === page}
+              />
+              <input
+                type="radio"
+                id={`rad-${name.toLowerCase()}`}
+                name={`rad-${name.toLowerCase()}`}
+                checked={name === page}
+                readOnly
+              />
+            </React.Fragment>
           ))}
+          <div className={styles.slider} >
+          </div>
         </div>
       </div>
-      {navs.slice(1).map(({ name, ref }) => <div key={name} className={styles.layerOnCanvas} ref={ref}></div>)}
+      {navs.slice(1).map(({ name, ref }) => (
+        <div key={name} id={name} className={styles.layerOnCanvas} style={{ borderTop: '2px solid #000' }} ref={ref}>
+          {/* <div style={{ height: '2px', backgroundColor: 'black', width: '100%' }}></div> */}
+        </div>
+      ))}
     </>
   );
 }
