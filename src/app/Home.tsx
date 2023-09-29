@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './page.module.css';
+import Section from './components/Section/Section';
 
 type NavProps = {
   name: string,
@@ -21,8 +22,11 @@ const NavItem: React.FC<NavProps> = ({ name, clickFunc, highlight }) => {
 }
 
 export default function Home() {
-
   const [page, setPage] = useState('HOME');
+  const [screenSize, setScreenSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
   const refOne = useRef<HTMLDivElement>(null);
   const refTwo = useRef<HTMLDivElement>(null);
@@ -61,7 +65,6 @@ export default function Home() {
     };
   }
 
-
   const scrollFunc = (e: Event) => {
     if (e.currentTarget) {
       const scrollPosition = (e.currentTarget as Window).scrollY;
@@ -79,15 +82,26 @@ export default function Home() {
     }
   }
 
+  const handleResize = () => {
+    setScreenSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    })
+  }
+
   useEffect(() => {
+
+    window.scrollTo(0, 0);
+
+    window.addEventListener('resize', handleResize);
+
     window.addEventListener('scroll', scrollFunc);
     return () => {
+      window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', scrollFunc);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // console.log();
 
   return (
     <>
@@ -106,7 +120,7 @@ export default function Home() {
             <i className={`fa-solid fa-arrow-right ${styles.classIcon}`}></i>
           </button>
         </div>
-        <canvas className={styles.canvas} />
+        <canvas className={styles.canvas} height={screenSize.height} width={screenSize.width} />
       </div>
       <div className={styles.header}>
         <div className={styles.headerBox} >
@@ -133,7 +147,7 @@ export default function Home() {
       </div>
       {navs.slice(1).map(({ name, ref }) => (
         <div key={name} id={name} className={styles.layerOnCanvas} style={{ borderTop: '2px solid #000' }} ref={ref}>
-          {/* <div style={{ height: '2px', backgroundColor: 'black', width: '100%' }}></div> */}
+          <Section title={name} />
         </div>
       ))}
     </>
