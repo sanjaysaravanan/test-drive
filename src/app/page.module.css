@@ -10,9 +10,9 @@
   margin: 0;
   padding: 0;
   border: none;
-  /* height: 100vh;
-  min-width: 100%; */
   position: absolute;
+  height: 100vh;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: -99;
@@ -22,7 +22,7 @@
 .layerOnCanvas {
   position: relative;
   height: 100vh;
-  min-width: 100vw;
+  /* min-width: 100vw; */
   background: transparent;
   display: flex;
   align-items: center;

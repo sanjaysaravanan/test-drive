@@ -23,10 +23,6 @@ const NavItem: React.FC<NavProps> = ({ name, clickFunc, highlight }) => {
 
 export default function Home() {
   const [page, setPage] = useState('HOME');
-  const [screenSize, setScreenSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
 
   const refOne = useRef<HTMLDivElement>(null);
   const refTwo = useRef<HTMLDivElement>(null);
@@ -82,22 +78,11 @@ export default function Home() {
     }
   }
 
-  const handleResize = () => {
-    setScreenSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    })
-  }
-
   useEffect(() => {
-
     window.scrollTo(0, 0);
-
-    window.addEventListener('resize', handleResize);
 
     window.addEventListener('scroll', scrollFunc);
     return () => {
-      window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', scrollFunc);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -120,7 +105,7 @@ export default function Home() {
             <i className={`fa-solid fa-arrow-right ${styles.classIcon}`}></i>
           </button>
         </div>
-        <canvas className={styles.canvas} height={screenSize.height} width={screenSize.width} />
+        <canvas className={styles.canvas} />
       </div>
       <div className={styles.header}>
         <div className={styles.headerBox} >
