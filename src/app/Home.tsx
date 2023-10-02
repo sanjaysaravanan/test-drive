@@ -23,6 +23,7 @@ const NavItem: React.FC<NavProps> = ({ name, clickFunc, highlight }) => {
 
 export default function Home() {
   const [page, setPage] = useState('HOME');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const refOne = useRef<HTMLDivElement>(null);
   const refTwo = useRef<HTMLDivElement>(null);
@@ -48,6 +49,7 @@ export default function Home() {
         inline: 'center'
       })
     }
+    setMenuOpen(false);
   }
 
   const getDimensions = (ele: HTMLDivElement) => {
@@ -78,9 +80,28 @@ export default function Home() {
     }
   }
 
+  const renderMenuItems = (isMobile: boolean) => {
+    return navs.map(({ name, ref }) => (
+      <React.Fragment key={name}>
+        <NavItem
+          name={name}
+          key={name}
+          clickFunc={() => goToCurrent(ref)}
+          highlight={name === page}
+        />
+        {!isMobile && <input
+          type="radio"
+          id={`rad-${name.toLowerCase()}`}
+          name={`rad-${name.toLowerCase()}`}
+          checked={name === page}
+          readOnly
+        />}
+      </React.Fragment>
+    ))
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0);
-
     window.addEventListener('scroll', scrollFunc);
     return () => {
       window.removeEventListener('scroll', scrollFunc);
@@ -109,25 +130,29 @@ export default function Home() {
       </div>
       <div className={styles.header}>
         <div className={styles.headerBox} >
-          {navs.map(({ name, ref }) => (
-            <React.Fragment key={name}>
-              <NavItem
-                name={name}
-                key={name}
-                clickFunc={() => goToCurrent(ref)}
-                highlight={name === page}
-              />
-              <input
-                type="radio"
-                id={`rad-${name.toLowerCase()}`}
-                name={`rad-${name.toLowerCase()}`}
-                checked={name === page}
-                readOnly
-              />
-            </React.Fragment>
-          ))}
+          {renderMenuItems(false)}
           <div className={styles.slider} >
           </div>
+        </div>
+        <div className={styles.headerBoxMobile} >
+          <button
+            className={styles.noBorderBtn}
+            onClick={() => {
+              if (menuOpen) {
+                setMenuOpen(false);
+              } else {
+                setMenuOpen(true);
+              }
+            }}
+          >
+            <i className={`fa-solid fa-bars fa-3x ${styles.menuIcon}`} ></i>
+          </button>
+        </div>
+        <div
+          className={styles.menuBox}
+          style={{ height: menuOpen ? '180px' : 0 }}
+        >
+          {renderMenuItems(true)}
         </div>
       </div>
       {navs.slice(1).map(({ name, ref }) => (
