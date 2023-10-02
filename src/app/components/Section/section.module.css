@@ -9,6 +9,9 @@
   transition: all 0.7s;
   filter: blur(5px);
   transform: translateX(-200%);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 10px;
 }
 
 .show {

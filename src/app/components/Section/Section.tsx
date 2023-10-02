@@ -32,7 +32,7 @@ const Section: React.FC<SectionProps> = ({ title }) => {
 
   return (
     <div className={styles.section} ref={sectionRef} >
-      <h2 className={`${styles.hidden} ${onView ? styles.show : ''}`}>{title}</h2>
+      <h1 className={`${styles.hidden} ${onView ? styles.show : ''}`}>{title}</h1>
       <div className={`${styles.hidden} ${styles.line} ${onView ? styles.show : ''}`} ></div>
     </div>
   )

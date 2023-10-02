@@ -116,6 +116,18 @@
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  .homeText {
+    font-size: 1.5rem;
+  }
+  .viewBtn {
+    font-size: 1.25rem;
+  }
+  .homeTextHighlight {
+    font-size: 1.75rem;
+  }
+}
+
 @media (min-width: 100px) and (max-width: 900px) {
   .headerBox {
     display: none;
