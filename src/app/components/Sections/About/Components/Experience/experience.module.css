@@ -1,0 +1,17 @@
+.conatiner {
+  display: flex;
+  width: 100%;
+  margin: 16px 0px;
+}
+
+.item {
+  padding: 16px;
+  width: 33.33%;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .item {
+    width: 100%;
+  }
+}

@@ -34,7 +34,14 @@ const Section: React.FC<SectionProps> = ({ title, currRef, isHome, children }) =
   }, [sectionRef]);
 
   return (
-    <div id={title} className={styles.layerOnCanvas} style={{ borderTop: '2px solid #000' }} ref={currRef}>
+    <div
+      id={title}
+      className={styles.layerOnCanvas}
+      style={{
+        borderTop: '2px solid #000',
+      }}
+      ref={currRef}
+    >
       {isHome ? (
         children
       ) : (
