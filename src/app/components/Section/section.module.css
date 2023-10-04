@@ -2,7 +2,7 @@
   color: #000;
   display: grid;
   place-items: center;
-  /* width: 100%; */
+  width: 100%;
 }
 
 .hidden {
@@ -30,7 +30,7 @@
 /* Layer On top of the canvas */
 .layerOnCanvas {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background: transparent;
   display: flex;
   align-items: center;

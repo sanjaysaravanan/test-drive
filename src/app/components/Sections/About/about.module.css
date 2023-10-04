@@ -1,7 +1,18 @@
 .container {
   margin: 16px;
-  height: 500px;
-  width: 500px;
-  background-color: var(--primary-main);
-  /* position: absolute; */
+  /* padding: 16px; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.introChild {
+  margin: 48px;
+  width: calc(50% - 96px);
+}
+
+@media (max-width: 600px) {
+  .introChild {
+    width: 100%;
+  }
 }

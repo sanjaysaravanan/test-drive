@@ -1,10 +1,32 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
+
+import Image from 'next/image';
+
+import styles from './Intro.module.css';
 
 const Intro = () => {
   return (
-    <>
-      <h1>Coming Soon</h1>
-    </>
+    <div className={styles.profilePic}>
+      <Image
+        src={'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/master/src/app/assets/sanjay.jpg'}
+        alt="Me"
+        width={300}
+        height={300}
+        style={{
+          objectFit: 'cover',
+          borderRadius: '50%'
+        }}
+      />
+      <p>
+        I&apos;m a Software Developer for {' '}
+        <a
+          href='https://www.encora.com'
+          className={styles.link} >
+          Encora Inc
+        </a> {' '}
+        in India, Bengaluru. I have serious passion for UI & API Development, basic DevOps & Cloud services.
+      </p>
+    </div>
   )
 };
 

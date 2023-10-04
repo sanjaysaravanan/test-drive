@@ -1,13 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 
-import styles from './slider.module.css';
+import styles from './skill.module.css';
 
-type SliderProps = {
-  type: 'from-left' | 'from-right' | 'zoom-in' | 'zoom-out',
-  children: string | React.JSX.Element | React.JSX.Element[]
+type SkillProps = {
+  percent: number,
+  title: string,
 }
 
-const Slider: React.FC<SliderProps> = ({ type, children }) => {
+const Skill: React.FC<SkillProps> = ({ title, percent }) => {
 
   const elementRef = useRef(null);
   const [mounted, setMounted] = useState(false);
@@ -33,15 +33,24 @@ const Slider: React.FC<SliderProps> = ({ type, children }) => {
   }, [elementRef]);
 
   return (
-    <div style={{ overflow: 'hidden' }} >
-      <div
-        ref={elementRef}
-        className={`${styles.hidden} ${styles[type]} ${mounted ? styles.show : ''}`}
-      >
-        {children}
+    <div
+      className={styles.container}
+      ref={elementRef}
+    >
+      <div className={styles.titleTxt} >
+        {title}
       </div>
+      <div className={styles.percent}>
+        <div
+          className={styles.innerPercent}
+          style={{
+            width: `${mounted ? percent : 0}%`
+          }}
+        />
+      </div>
+      <h3 className={styles.percentTxt} >{percent}%</h3>
     </div>
   )
-};
+}
 
-export default Slider;
+export default Skill;

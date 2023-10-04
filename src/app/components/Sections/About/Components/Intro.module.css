@@ -1,0 +1,9 @@
+
+.profilePic {
+  text-align: center;
+}
+
+.link {
+  color: var(--primary-main);
+  text-decoration: none;
+}

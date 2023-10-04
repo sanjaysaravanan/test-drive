@@ -36,10 +36,10 @@ export default function Main() {
 
   const navs = [
     { name: 'HOME', ref: refOne },
-    { name: 'ABOUT', ref: refTwo, children: <About /> },
+    { name: 'PROFILE', ref: refTwo, children: <About /> },
     { name: 'PROJECTS', ref: refThree },
     { name: 'GAMES', ref: refFour },
-    { name: 'BLOG', ref: refFive },
+    { name: 'BLOGS', ref: refFive },
     { name: 'CONTACT', ref: refSix },
   ];
 

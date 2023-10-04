@@ -91,7 +91,7 @@
 input[id="rad-home"]:checked ~ .slider {
   transform: translateX(0);
 }
-input[id="rad-about"]:checked ~ .slider {
+input[id="rad-profile"]:checked ~ .slider {
   transform: translateX(100%);
 }
 input[id="rad-projects"]:checked ~ .slider {
@@ -100,7 +100,7 @@ input[id="rad-projects"]:checked ~ .slider {
 input[id="rad-games"]:checked ~ .slider {
   transform: translateX(300%);
 }
-input[id="rad-blog"]:checked ~ .slider {
+input[id="rad-blogs"]:checked ~ .slider {
   transform: translateX(400%);
 }
 input[id="rad-contact"]:checked ~ .slider {
