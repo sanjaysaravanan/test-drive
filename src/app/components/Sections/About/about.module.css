@@ -1,18 +1,17 @@
 .container {
   margin: 16px;
-  /* padding: 16px; */
-  width: 100%;
+  width: calc(100% - 32px);
   display: flex;
   flex-wrap: wrap;
 }
 
 .introChild {
-  margin: 48px;
-  width: calc(50% - 96px);
+  margin: 24px;
+  width: calc(50% - 48px);
 }
 
 @media (max-width: 600px) {
   .introChild {
-    width: 100%;
+    width: calc(100% - 48px);
   }
 }

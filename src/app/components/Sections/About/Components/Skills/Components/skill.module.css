@@ -31,6 +31,19 @@
   min-width: 80%;
 }
 
+@media (max-width: 600px) {
+  .titleTxt {
+    min-width: 25%;
+    width: 25%;
+    font-size: 16px;
+  }
+  .percent {
+    min-width: 75%;
+    width: 75%;
+  }
+}
+
+
 .innerPercent {
   background-color: var(--primary-main);
   height: 30px;
