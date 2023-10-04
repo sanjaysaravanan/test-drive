@@ -1,0 +1,7 @@
+.container {
+  margin: 16px;
+  height: 500px;
+  width: 500px;
+  background-color: var(--primary-main);
+  /* position: absolute; */
+}

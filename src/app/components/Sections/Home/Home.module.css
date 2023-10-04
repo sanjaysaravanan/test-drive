@@ -1,0 +1,51 @@
+/* Background Canvas */
+.canvas {
+  background: linear-gradient(45deg, #0d1011 0% 20%, #163486);
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+
+.homeText {
+  z-index: 2;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.homeTextHighlight {
+  color: var(--primary-main);
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.classIcon {
+  transition: all 0.5s ease;
+}
+
+.viewBtn {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 12px 16px;
+  margin: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  z-index: 999;
+}
+
+.viewBtn:hover {
+  background-color: var(--primary-main);
+  border-color: var(--primary-main);
+}
+
+.viewBtn:hover .classIcon {
+  transform: rotate(90deg);
+}

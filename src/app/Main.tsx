@@ -3,6 +3,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './page.module.css';
 import Section from './components/Section/Section';
+import Home from './components/Sections/Home/Home';
+import About from './components/Sections/About/About';
 
 type NavProps = {
   name: string,
@@ -21,7 +23,7 @@ const NavItem: React.FC<NavProps> = ({ name, clickFunc, highlight }) => {
   );
 }
 
-export default function Home() {
+export default function Main() {
   const [page, setPage] = useState('HOME');
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -34,7 +36,7 @@ export default function Home() {
 
   const navs = [
     { name: 'HOME', ref: refOne },
-    { name: 'ABOUT', ref: refTwo },
+    { name: 'ABOUT', ref: refTwo, children: <About /> },
     { name: 'PROJECTS', ref: refThree },
     { name: 'GAMES', ref: refFour },
     { name: 'BLOG', ref: refFive },
@@ -42,6 +44,8 @@ export default function Home() {
   ];
 
   function goToCurrent(currRef: React.RefObject<HTMLDivElement>) {
+    console.log('Inside the Go to Ref Function');
+    console.log(currRef.current);
     if (currRef.current) {
       currRef.current.scrollIntoView({
         behavior: 'smooth',
@@ -111,23 +115,9 @@ export default function Home() {
 
   return (
     <>
-      <div className={styles.layerOnCanvas} ref={refOne} id="HOME" >
-        <div className={styles.homeText}  >
-          Hello, I&apos;m <span className={styles.homeTextHighlight} >Sanjay Saravanan</span>.
-          <br />
-          I&apos;m a full-stack developer.
-          <br />
-          <button
-            type='button'
-            className={styles.viewBtn}
-            onClick={() => goToCurrent(refTwo)}
-          >
-            View my work&nbsp;
-            <i className={`fa-solid fa-arrow-right ${styles.classIcon}`}></i>
-          </button>
-        </div>
-        <canvas className={styles.canvas} />
-      </div>
+      <Section title='HOME' currRef={refOne} isHome={true} >
+        <Home toRef={refTwo} refFunc={goToCurrent} />
+      </Section>
       <div className={styles.header}>
         <div className={styles.headerBox} >
           {renderMenuItems(false)}
@@ -155,10 +145,10 @@ export default function Home() {
           {renderMenuItems(true)}
         </div>
       </div>
-      {navs.slice(1).map(({ name, ref }) => (
-        <div key={name} id={name} className={styles.layerOnCanvas} style={{ borderTop: '2px solid #000' }} ref={ref}>
-          <Section title={name} />
-        </div>
+      {navs.slice(1).map(({ name, ref, children }) => (
+        <Section title={name} currRef={ref} key={name} isHome={false}>
+          {children}
+        </Section>
       ))}
     </>
   );
