@@ -6,7 +6,7 @@ import { skills } from '@/app/data';
 const Skills = () => {
   return (
     <>
-      {skills.map(({ title, rating }) => (
+      {skills.filter(({ show = true }) => show).map(({ title, rating }) => (
         <Skill title={title} percent={rating} key={title} />
       ))}
     </>

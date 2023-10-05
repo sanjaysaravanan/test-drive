@@ -3,16 +3,16 @@ export const skills = [
     title: 'HTML',
     icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/e6ca4f4bad5cec02d4a61399a7f91c93ff5d4758/src/app/assets/html.svg',
     type: 'front-end',
-    height: 40,
-    width: 29,
+    height: 49,
+    width: 35,
     rating: 90,
   },
   { 
     title: 'CSS',
     icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/47b3c9b8ab01cc5986018f9b5aa2a9c832f7cc81/src/app/assets/css.svg',
     type: 'front-end',
-    height: 40,
-    width: 29,
+    height: 49,
+    width: 35,
     rating: 85,
   },
   { 
@@ -28,7 +28,7 @@ export const skills = [
     icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/typescript.svg',
     type: 'front-end',
     height: 49,
-    width: 35,
+    width: 40,
     rating: 75,
   },
   { 
@@ -36,7 +36,7 @@ export const skills = [
     icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/react.svg',
     type: 'front-end',
     height: 49,
-    width: 40,
+    width: 45,
     rating: 90,
   },
   {
@@ -44,15 +44,15 @@ export const skills = [
     icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/nextjs-icon.svg',
     type: 'front-end',
     height: 49,
-    width: 37,
+    width: 40,
     rating: 75
   },
   {
     title: 'NodeJS',
     icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/nodejs.svg',
     type: 'back-end',
-    height: 49,
-    width: 45,
+    height: 40,
+    width: 55,
     rating: 80,
   },
   {
@@ -80,6 +80,22 @@ export const skills = [
     rating: 70,
   },
   {
+    title: 'MongoDB',
+    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/76cbae68fa801ccc1481fd5b156c301026375541/src/app/assets/mongodb.svg',
+    type: 'back-end',
+    height: 50,
+    width: 50,
+    rating: 80,
+  },
+  {
+    title: 'Postman',
+    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/76cbae68fa801ccc1481fd5b156c301026375541/src/app/assets/postman.svg',
+    type: 'back-end',
+    height: 35,
+    width: 35,
+    rating: 70,
+  },
+  {
     title: 'Docker',
     icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/docker.svg',
     type: 'devops-cloud',
@@ -94,6 +110,7 @@ export const skills = [
     height: 50,
     width: 40,
     rating: 60,
+    show: false,
   },
   {
     title: 'Cloud',
@@ -102,5 +119,6 @@ export const skills = [
     height: 35,
     width: 50,
     rating: 60,
+    show: false,
   },
 ]
