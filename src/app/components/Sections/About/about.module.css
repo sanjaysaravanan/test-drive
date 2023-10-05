@@ -6,8 +6,11 @@
 }
 
 .introChild {
-  margin: 24px;
+  margin: 48px 24px;
   width: calc(50% - 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (max-width: 600px) {

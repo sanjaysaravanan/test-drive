@@ -17,14 +17,14 @@ const Intro = () => {
           borderRadius: '50%'
         }}
       />
-      <p>
+      <p className={styles.introText} >
         I&apos;m a Software Developer for {' '}
         <a
           href='https://www.encora.com'
           className={styles.link} >
           Encora Inc
         </a> {' '}
-        in India, Bengaluru. I have serious passion for UI & API Development, basic DevOps & Cloud services.
+        in India, Bengaluru.<br /> I have serious passion for UI & API Development, basic DevOps & Cloud services.
       </p>
     </div>
   )

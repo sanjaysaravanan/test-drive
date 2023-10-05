@@ -1,17 +1,25 @@
 .conatiner {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
   margin: 16px 0px;
 }
 
 .item {
   padding: 16px;
-  width: 33.33%;
+  margin: 24px 0;
+  width: calc(33.33% - 32px);
   text-align: center;
 }
 
 @media (max-width: 600px) {
   .item {
-    width: 100%;
+    width: calc(100% - 32px);
   }
+}
+
+.skillsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
