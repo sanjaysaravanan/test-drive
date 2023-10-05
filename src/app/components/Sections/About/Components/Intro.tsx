@@ -21,7 +21,9 @@ const Intro = () => {
         I&apos;m a Software Developer for {' '}
         <a
           href='https://www.encora.com'
-          className={styles.link} >
+          className={styles.link}
+          target='_blank'
+        >
           Encora Inc
         </a> {' '}
         in India, Bengaluru.<br /> I have serious passion for UI & API Development, basic DevOps & Cloud services.
