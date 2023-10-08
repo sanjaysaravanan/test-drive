@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import Section from './components/Section/Section';
 import Home from './components/Sections/Home/Home';
 import About from './components/Sections/About/About';
+import Projects from './components/Sections/Projects/Projects';
 
 type NavProps = {
   name: string,
@@ -37,7 +38,7 @@ export default function Main() {
   const navs = [
     { name: 'HOME', ref: refOne },
     { name: 'PROFILE', ref: refTwo, children: <About /> },
-    { name: 'PROJECTS', ref: refThree },
+    { name: 'PROJECTS', ref: refThree, children: <Projects /> },
     { name: 'GAMES', ref: refFour },
     { name: 'BLOGS', ref: refFive },
     { name: 'CONTACT', ref: refSix },
