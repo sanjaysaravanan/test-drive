@@ -6,6 +6,7 @@ import Section from './components/Section/Section';
 import Home from './components/Sections/Home/Home';
 import About from './components/Sections/About/About';
 import Projects from './components/Sections/Projects/Projects';
+import Footer from './components/Sections/Footer/Footer';
 
 type NavProps = {
   name: string,
@@ -151,6 +152,7 @@ export default function Main() {
           {children}
         </Section>
       ))}
+      <Footer />
     </>
   );
 }

@@ -37,3 +37,15 @@
   justify-content: center;
   color: white;
 }
+
+.layerOnCanvas:first-child {
+  background-color: transparent !important;
+}
+
+.layerOnCanvas:nth-of-type(odd) {
+  background-color: #F4F4F4;
+}
+
+.layerOnCanvas:nth-of-type(even) {
+  background-color: #fff;
+}
