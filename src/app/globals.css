@@ -64,3 +64,24 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+.viewLink {
+  text-decoration: none;
+  color: #000;
+  padding: 8px;
+  border: 2px solid #000 !important;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewLink:hover {
+  color: #fff;
+  background-color: var(--primary-main);
+  border-color: var(--primary-main) !important;
+}
+
+.noBorderBtn {
+  background: none;
+  cursor: pointer;
+  border: none;
+}

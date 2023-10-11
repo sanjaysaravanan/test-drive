@@ -107,12 +107,6 @@ input[id="rad-contact"]:checked ~ .slider {
   transform: translateX(500%);
 }
 
-.noBorderBtn {
-  background: none;
-  cursor: pointer;
-  border: none;
-}
-
 .navItem {
   color: #fff;
   font-size: 1.25rem;

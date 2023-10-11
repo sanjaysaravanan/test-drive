@@ -56,7 +56,7 @@ const LinkCard: React.FC<LinkProps> = ({
           <a
             href={sourceUrl}
             target='_blank'
-            className={styles.viewLink}
+            className={'viewLink'}
           >
             View Source
           </a>

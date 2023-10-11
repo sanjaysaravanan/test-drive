@@ -7,6 +7,7 @@ import Home from './components/Sections/Home/Home';
 import About from './components/Sections/About/About';
 import Projects from './components/Sections/Projects/Projects';
 import Footer from './components/Sections/Footer/Footer';
+import Contact from './components/Sections/Contact/Contact';
 
 type NavProps = {
   name: string,
@@ -17,7 +18,7 @@ type NavProps = {
 const NavItem: React.FC<NavProps> = ({ name, clickFunc, highlight }) => {
   return (
     <button
-      className={`${styles.noBorderBtn} ${styles.navItem} ${highlight ? styles.highlightNav : ''}`}
+      className={`noBorderBtn ${styles.navItem} ${highlight ? styles.highlightNav : ''}`}
       onClick={clickFunc}
     >
       {name}
@@ -42,7 +43,7 @@ export default function Main() {
     { name: 'PROJECTS', ref: refThree, children: <Projects /> },
     { name: 'GAMES', ref: refFour },
     { name: 'BLOGS', ref: refFive },
-    { name: 'CONTACT', ref: refSix },
+    { name: 'CONTACT', ref: refSix, children: <Contact /> },
   ];
 
   function goToCurrent(currRef: React.RefObject<HTMLDivElement>) {
@@ -128,7 +129,7 @@ export default function Main() {
         </div>
         <div className={styles.headerBoxMobile} >
           <button
-            className={styles.noBorderBtn}
+            className='noBorderBtn'
             onClick={() => {
               if (menuOpen) {
                 setMenuOpen(false);

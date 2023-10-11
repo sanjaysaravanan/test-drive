@@ -12,22 +12,6 @@
   background: none;
 }
 
-.viewLink {
-  text-decoration: none;
-  color: #000;
-  padding: 8px;
-  border: 2px solid #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.viewLink:hover {
-  color: #fff;
-  background-color: var(--primary-main);
-  border-color: var(--primary-main);
-}
-
 .link {
   text-decoration: none;
   color: #000;
