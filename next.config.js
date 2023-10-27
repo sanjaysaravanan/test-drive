@@ -9,6 +9,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'incredible-travesseiro-65b215.netlify.app'
+      },
+      {
+        protocol: 'https',
+        hostname: 'ik.imagekit.io'
       }
     ]
   }

@@ -1,9 +1,7 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import React from 'react';
 
 import styles from './experience.module.css';
-import FEImage from '../../../../../assets/FrontEnd.jpg';
-import awsIcon from '../../../../../assets/aws.svg';
 import Slider from '../../../Slider/Slider';
 
 import { skills as data } from '@/app/data';
@@ -34,7 +32,8 @@ const SkillExperience: React.FC<ExpProps> = ({ years, image, title, text, skills
         style={{
           objectFit: 'contain',
           borderRadius: '50%',
-          border: '1px solid #d9d9d9'
+          border: '1px solid #d9d9d9',
+          backgroundColor: '#fff'
         }}
       />
       <h3>{title}</h3>
@@ -64,7 +63,7 @@ const Experience = () => {
         <Slider type='from-left'>
           <SkillExperience
             title="Front End"
-            image={'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/master/src/app/assets/FrontEnd.jpg'}
+            image={'https://ik.imagekit.io/twsok8jou/FrontEnd.jpg'}
             years={4}
             text={'Years of experience'}
             skills={data.filter(({ type }) => type === 'front-end')}
@@ -75,7 +74,7 @@ const Experience = () => {
         <Slider type='zoom-in'>
           <SkillExperience
             title="Back End"
-            image={'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/master/src/app/assets/BackEnd.jpg'}
+            image={'https://ik.imagekit.io/twsok8jou/BackEnd.jpg'}
             years={3.5}
             text={'Years of experience'}
             skills={data.filter(({ type }) => type === 'back-end')}
@@ -86,7 +85,7 @@ const Experience = () => {
         <Slider type='from-right'>
           <SkillExperience
             title="Basic DevOps & Cloud"
-            image={'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/master/src/app/assets/DevOps.jpg'}
+            image={'https://ik.imagekit.io/twsok8jou/DevOps.jpg'}
             text={'Hands on experience'}
             skills={data.filter(({ type }) => type === 'devops-cloud')}
           />

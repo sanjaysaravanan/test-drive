@@ -1,7 +1,7 @@
 export const skills = [
   { 
     title: 'HTML',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/e6ca4f4bad5cec02d4a61399a7f91c93ff5d4758/src/app/assets/html.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/html.svg',
     type: 'front-end',
     height: 49,
     width: 35,
@@ -9,7 +9,7 @@ export const skills = [
   },
   { 
     title: 'CSS',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/47b3c9b8ab01cc5986018f9b5aa2a9c832f7cc81/src/app/assets/css.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/css.svg',
     type: 'front-end',
     height: 49,
     width: 35,
@@ -17,7 +17,7 @@ export const skills = [
   },
   { 
     title: 'Javascript',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/e6ca4f4bad5cec02d4a61399a7f91c93ff5d4758/src/app/assets/javascript.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/javascript.svg',
     type: 'front-end',
     height: 49,
     width: 35,
@@ -25,7 +25,7 @@ export const skills = [
   },
   { 
     title: 'Typescript',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/typescript.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/typescript.svg',
     type: 'front-end',
     height: 49,
     width: 40,
@@ -33,7 +33,7 @@ export const skills = [
   },
   { 
     title: 'React',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/react.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/react.svg',
     type: 'front-end',
     height: 49,
     width: 45,
@@ -41,7 +41,7 @@ export const skills = [
   },
   {
     title: 'NextJS',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/nextjs-icon.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/nextjs-icon.svg',
     type: 'front-end',
     height: 49,
     width: 40,
@@ -49,7 +49,7 @@ export const skills = [
   },
   {
     title: 'NodeJS',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/nodejs.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/nodejs.svg',
     type: 'back-end',
     height: 40,
     width: 55,
@@ -57,7 +57,7 @@ export const skills = [
   },
   {
     title: 'Python',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/python.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/python.svg',
     type: 'back-end',
     height: 35,
     width: 35,
@@ -65,7 +65,7 @@ export const skills = [
   },
   {
     title: 'Express',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/icons8-express-js.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/icons8-express-js.svg',
     type: 'back-end',
     height: 49,
     width: 35,
@@ -73,7 +73,7 @@ export const skills = [
   },
   {
     title: 'Flask',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/flask.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/flask.svg',
     type: 'back-end',
     height: 40,
     width: 29,
@@ -81,7 +81,7 @@ export const skills = [
   },
   {
     title: 'MongoDB',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/76cbae68fa801ccc1481fd5b156c301026375541/src/app/assets/mongodb.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/mongodb.svg',
     type: 'back-end',
     height: 50,
     width: 50,
@@ -89,7 +89,7 @@ export const skills = [
   },
   {
     title: 'Postman',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/76cbae68fa801ccc1481fd5b156c301026375541/src/app/assets/postman.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/postman.svg',
     type: 'back-end',
     height: 35,
     width: 35,
@@ -97,7 +97,7 @@ export const skills = [
   },
   {
     title: 'Docker',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/docker.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/docker.svg',
     type: 'devops-cloud',
     height: 50,
     width: 50,
@@ -105,7 +105,7 @@ export const skills = [
   },
   {
     title: 'Jenkins',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/jenkins.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/jenkins.svg',
     type: 'devops-cloud',
     height: 50,
     width: 40,
@@ -114,7 +114,7 @@ export const skills = [
   },
   {
     title: 'Cloud',
-    icon: 'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/d01e675760d896fd99fe40037361f9d99491eb90/src/app/assets/aws.svg',
+    icon: 'https://ik.imagekit.io/twsok8jou/aws.svg',
     type: 'devops-cloud',
     height: 35,
     width: 50,

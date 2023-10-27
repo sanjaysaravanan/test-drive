@@ -29,10 +29,11 @@ const LinkCard: React.FC<LinkProps> = ({
       className={styles.container}
     >
       <Image
-        src={imageUrl}
+        src={'https://ik.imagekit.io/twsok8jou/docker.jpeg'}
         alt={title}
         height={200}
         width={300}
+        crossOrigin='anonymous'
       />
       <a
         href={url}

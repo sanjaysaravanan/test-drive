@@ -8,7 +8,7 @@ const Intro = () => {
   return (
     <div className={styles.profilePic}>
       <Image
-        src={'https://raw.githubusercontent.com/sanjaysaravanan/test-drive/master/src/app/assets/sanjay.jpg'}
+        src={'https://ik.imagekit.io/twsok8jou/sanjay.jpg'}
         alt="Me"
         width={300}
         height={300}
