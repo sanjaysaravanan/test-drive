@@ -5,7 +5,7 @@ const links = [
   { label: 'square-facebook', href: 'https://www.facebook.com/sanjaysaravanan21' },
   { label: 'instagram', href: 'https://www.instagram.com/sanjaysaravanan_21' },
   { label: 'x-twitter', href: 'https://twitter.com/sanjaysaravan21' },
-  { label: 'whatsapp', href: 'https://wa.me/9790889427' },
+  { label: 'whatsapp', href: 'https://wa.me/+919790889427' },
 ]
 
 const Footer = () => {
