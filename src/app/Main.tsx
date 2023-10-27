@@ -8,6 +8,7 @@ import About from './components/Sections/About/About';
 import Projects from './components/Sections/Projects/Projects';
 import Footer from './components/Sections/Footer/Footer';
 import Contact from './components/Sections/Contact/Contact';
+import Blogs from './components/Sections/Blogs/Blogs';
 
 type NavProps = {
   name: string,
@@ -42,7 +43,7 @@ export default function Main() {
     { name: 'PROFILE', ref: refTwo, children: <About /> },
     { name: 'PROJECTS', ref: refThree, children: <Projects /> },
     { name: 'GAMES', ref: refFour },
-    { name: 'BLOGS', ref: refFive },
+    { name: 'BLOGS', ref: refFive, children: <Blogs /> },
     { name: 'CONTACT', ref: refSix, children: <Contact /> },
   ];
 

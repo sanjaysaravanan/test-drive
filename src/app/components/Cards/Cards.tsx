@@ -29,7 +29,7 @@ const LinkCard: React.FC<LinkProps> = ({
       className={styles.container}
     >
       <Image
-        src={'https://ik.imagekit.io/twsok8jou/docker.jpeg'}
+        src={imageUrl}
         alt={title}
         height={200}
         width={300}
