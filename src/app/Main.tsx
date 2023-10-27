@@ -48,8 +48,6 @@ export default function Main() {
   ];
 
   function goToCurrent(currRef: React.RefObject<HTMLDivElement>) {
-    console.log('Inside the Go to Ref Function');
-    console.log(currRef.current);
     if (currRef.current) {
       currRef.current.scrollIntoView({
         behavior: 'smooth',
