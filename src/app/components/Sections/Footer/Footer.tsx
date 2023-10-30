@@ -4,7 +4,7 @@ const links = [
   { label: 'linkedin', href: 'https://www.linkedin.com/in/sanjaysaravanan21' },
   { label: 'square-facebook', href: 'https://www.facebook.com/sanjaysaravanan21' },
   { label: 'instagram', href: 'https://www.instagram.com/sanjaysaravanan_21' },
-  { label: 'x-twitter', href: 'https://twitter.com/sanjaysaravan21' },
+  { label: 'github', href: 'https://github.com/sanjaysaravanan' },
   { label: 'whatsapp', href: 'https://wa.me/+919790889427' },
 ]
 
