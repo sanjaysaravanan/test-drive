@@ -30,6 +30,7 @@ const NavItem: React.FC<NavProps> = ({ name, clickFunc, highlight }) => {
 export default function Main() {
   const [page, setPage] = useState('HOME');
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrollTop, setScrollTop] = useState(false);
 
   const refOne = useRef<HTMLDivElement>(null);
   const refTwo = useRef<HTMLDivElement>(null);
@@ -78,6 +79,7 @@ export default function Main() {
         if (ele) {
           const { offsetBottom, offsetTop } = getDimensions(ele);
           if (scrollPosition > offsetTop && scrollPosition < offsetBottom) {
+            setScrollTop(obj.name !== 'HOME');
             setPage(obj.name);
             break;
           }
@@ -153,6 +155,11 @@ export default function Main() {
         </Section>
       ))}
       <Footer />
+      {scrollTop && (
+        <div className={styles.scrollToTop} onClick={() => goToCurrent(refOne)} >
+          <i className="fa-solid fa-arrow-up fa-2x"></i>
+        </div>
+      )}
     </>
   );
 }
