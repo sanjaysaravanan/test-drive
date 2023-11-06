@@ -9,6 +9,7 @@ import Projects from './components/Sections/Projects/Projects';
 import Footer from './components/Sections/Footer/Footer';
 import Contact from './components/Sections/Contact/Contact';
 import Blogs from './components/Sections/Blogs/Blogs';
+import AppContext from './AppContext';
 
 type NavProps = {
   name: string,
@@ -31,6 +32,7 @@ export default function Main() {
   const [page, setPage] = useState('HOME');
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollTop, setScrollTop] = useState(false);
+  const [showLoading, setLoading] = useState(false);
 
   const refOne = useRef<HTMLDivElement>(null);
   const refTwo = useRef<HTMLDivElement>(null);
@@ -68,6 +70,10 @@ export default function Main() {
       offsetTop,
       offsetBottom,
     };
+  }
+
+  const handleLoading = () => {
+    setLoading((data) => !data);
   }
 
   const scrollFunc = (e: Event) => {
@@ -118,7 +124,7 @@ export default function Main() {
   }, []);
 
   return (
-    <>
+    <AppContext.Provider value={{ handleLoading }}>
       <Section title='HOME' currRef={refOne} isHome={true} >
         <Home toRef={refTwo} refFunc={goToCurrent} />
       </Section>
@@ -157,9 +163,12 @@ export default function Main() {
       <Footer />
       {scrollTop && (
         <div className={styles.scrollToTop} onClick={() => goToCurrent(refOne)} >
-          <i className="fa-solid fa-arrow-up fa-2x"></i>
+          <i className="fa-solid fa-arrow-up"></i>
         </div>
       )}
-    </>
+      {showLoading && <div className={styles.overlay} >
+        <i className="fa-solid fa-spinner fa-spin fa-3x"></i>
+      </div>}
+    </AppContext.Provider>
   );
 }

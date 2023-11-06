@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './cards.module.css';
 import Image from 'next/image';
+import Slider from '../Sections/Slider/Slider';
 
 type LinkProps = {
   url: string,
@@ -75,7 +76,9 @@ const Cards: React.FC<CardsProps> = ({ data }) => {
   return (
     <div className={styles.cardsContainer} >
       {data.map((details) => (
-        <LinkCard {...details} key={details.title} />
+        <Slider type='zoom-in' key={details.title}>
+          <LinkCard {...details} />
+        </Slider>
       ))}
     </div>
   )
