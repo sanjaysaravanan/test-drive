@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/nodemailer": "^6.4.13",
     "next": "latest",
     "nodemailer": "^6.9.7",
     "react": "latest",

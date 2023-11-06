@@ -5,8 +5,7 @@ export const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'sanjaysaravanan00007@gmail.com',
-    // ToDo: Remove the visible creds
-    pass: 'ntmtnlhslnjoyfql'
+    pass: process.env.GMAIL_KEY
   }
 });
 
