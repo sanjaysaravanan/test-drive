@@ -13,7 +13,7 @@ const Intro = () => {
         width={300}
         height={300}
         style={{
-          objectFit: 'cover',
+          objectFit: 'contain',
           borderRadius: '50%'
         }}
       />
