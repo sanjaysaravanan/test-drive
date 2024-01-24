@@ -12,7 +12,7 @@ type LinkProps = {
   type: 'game' | 'blog' | 'project',
   sourceUrl?: string,
   description?: string,
-  clickFunc: () => void,
+  clickFunc?: () => void,
 }
 
 const LinkCard: React.FC<LinkProps> = ({
