@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from './cards.module.css';
-import Image from 'next/image';
 import Slider from '../Sections/Slider/Slider';
 
 type LinkProps = {
@@ -12,7 +11,8 @@ type LinkProps = {
   techs?: string[],
   type: 'game' | 'blog' | 'project',
   sourceUrl?: string,
-  description: string,
+  description?: string,
+  clickFunc: () => void,
 }
 
 const LinkCard: React.FC<LinkProps> = ({
@@ -23,13 +23,14 @@ const LinkCard: React.FC<LinkProps> = ({
   date,
   type,
   description,
-  sourceUrl
+  sourceUrl,
+  clickFunc,
 }) => {
   return (
     <div
       className={styles.container}
     >
-      <Image
+      <img
         src={imageUrl}
         alt={title}
         height={200}
@@ -55,13 +56,16 @@ const LinkCard: React.FC<LinkProps> = ({
       {type !== 'blog' && (
         <>
           <h5>{techs?.join(' / ')}</h5>
-          <a
-            href={sourceUrl}
-            target='_blank'
-            className={'viewLink'}
-          >
-            View Source
-          </a>
+          <div style={{ textAlign: 'center' }} >
+            <a
+              href={sourceUrl}
+              target='_blank'
+              className={'viewLink'}
+              onClick={clickFunc || undefined}
+            >
+              {type === 'game' ? 'Play' : 'View Source'}
+            </a>
+          </div>
         </>
       )}
     </div>

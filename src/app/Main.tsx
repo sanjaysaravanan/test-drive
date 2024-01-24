@@ -9,6 +9,7 @@ import Projects from './components/Sections/Projects/Projects';
 import Footer from './components/Sections/Footer/Footer';
 import Contact from './components/Sections/Contact/Contact';
 import Blogs from './components/Sections/Blogs/Blogs';
+import Games from './components/Sections/Games/Games';
 import AppContext from './AppContext';
 
 type NavProps = {
@@ -45,7 +46,7 @@ export default function Main() {
     { name: 'HOME', ref: refOne },
     { name: 'PROFILE', ref: refTwo, children: <About /> },
     { name: 'PROJECTS', ref: refThree, children: <Projects /> },
-    { name: 'GAMES', ref: refFour },
+    { name: 'GAMES', ref: refFour, children: <Games /> },
     { name: 'BLOGS', ref: refFive, children: <Blogs /> },
     { name: 'CONTACT', ref: refSix, children: <Contact /> },
   ];
