@@ -33,9 +33,11 @@ const Intro = () => {
         <a
           href="https://ik.imagekit.io/twsok8jou/SanjaySaravanan.pdf"
           target="_blank"
+          className={styles.link}
           style={{
-            fontSize: '12px',
-            fontWeight: 'bold'
+            fontSize: "12px",
+            fontWeight: "bold",
+            textDecoration: "underline",
           }}
         >
           View / Download Resume
