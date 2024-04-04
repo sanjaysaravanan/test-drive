@@ -32,12 +32,20 @@ const Games = () => {
       <Cards
         data={[
           {
-            url: "https://sanjaysaravanan38.medium.com/containerize-an-application-using-dockerfile-bf35c38d4d95",
+            url: "https://github.com/sanjaysaravanan/test-drive/blob/master/src/app/components/Sections/Games/Games.tsx",
             imageUrl: "https://ik.imagekit.io/twsok8jou/snake-game-icon.jpg?updatedAt=1706071684192",
-            title: "Containerize an application using Docker",
+            title: "Snake Game",
             type: "game",
-            techs: [],
+            techs: ["ReactJS", "HTML", "Canvas"],
             clickFunc: () => openGame("snakeGame"),
+          },
+          {
+            url: "https://github.com/sanjaysaravanan/HTML-Mini-Task/blob/main/tic-tac-toe.html",
+            imageUrl: "https://ik.imagekit.io/twsok8jou/tic_tac_toe.png",
+            title: "Tic Tac Toe",
+            type: "game",
+            techs: ["HTML", "CSS", "JS"],
+            sourceUrl: 'https://guileless-pony-1f65d4.netlify.app/tic-tac-toe.html'
           },
         ]}
       />
