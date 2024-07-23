@@ -36,6 +36,7 @@ const LinkCard: React.FC<LinkProps> = ({
         height={200}
         width={300}
         crossOrigin='anonymous'
+        style={{objectFit: 'contain'}}
       />
       <a
         href={url}
