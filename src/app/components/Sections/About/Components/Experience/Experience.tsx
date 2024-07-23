@@ -64,7 +64,7 @@ const Experience = () => {
           <SkillExperience
             title="Front End"
             image={'https://ik.imagekit.io/twsok8jou/FrontEnd.jpg'}
-            years={4.5}
+            years={5}
             text={'Years of experience'}
             skills={data.filter(({ type }) => type === 'front-end')}
           />
@@ -75,7 +75,7 @@ const Experience = () => {
           <SkillExperience
             title="Back End"
             image={'https://ik.imagekit.io/twsok8jou/BackEnd.jpg'}
-            years={4}
+            years={5}
             text={'Years of experience'}
             skills={data.filter(({ type }) => type === 'back-end')}
           />
